@@ -16,7 +16,7 @@ This Java program simulates a University Management System with:
   are the same for all the students as only computer science students have Object Oriented Programming.
 - Integrates real student data for Luka Manvelishvili (per Argus records).
 - Fully modular with getters/setters.
-- for the diagram this is the exact image of how the program looks visually(it can be seen if in the editing mode):
+- for the diagram this is the exact image of how the program looks visually(it can be seen when in the editing mode):
 
 ┌─────────────────┐        1       ┌────────────────────────┐
 │     UMS         │◄───────────────│      Student           │
