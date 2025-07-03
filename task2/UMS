@@ -1,1 +1,85 @@
+package oop.finalexam.t2;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class UMS {
+    private List<Student> students;
+
+    public UMS() {
+        students = new ArrayList<>();
+    }
+
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+
+    public void printStudentData(Student student) {
+        System.out.println("Student Name: " + student.getFullName());
+        System.out.println("Learning Courses:");
+
+        for (LearningCourse course : student.getCourses()) {
+            System.out.println("-------------------------");
+            System.out.println(course);
+        }
+        System.out.println("=========================\n");
+    }
+
+    public static void main(String[] args) {
+        UMS ums = new UMS();
+
+        Student luka = new Student("Luka Manvelishvili");
+
+        luka.addCourse(new LearningCourse(
+                "Calculus II (ENG)",
+                "MATH150 Calculus I",
+                "Antiderivatives,\nDefinite integrals,\nTechniques and applications of integration,\nImproper integrals,\nInfinite series."
+        ));
+
+        luka.addCourse(new LearningCourse(
+                "English Language Course C1-2 (ENG)",
+                "English language course C1-1",
+                "Academic reading C1-2,\nAcademic writing C1-2"
+        ));
+
+        luka.addCourse(new LearningCourse(
+                "Object Oriented Programming (ENG)",
+                "CS50 Introduction to Programming",
+                "Java syntax and data structures,\nProcedural programming,\nClasses,\nEncapsulation, polymorphism, inheritance,\nPackages,\nWorking with the network,\nWork with files,\nWorking with text data,\nWork with the terminal."
+        ));
+
+        luka.addCourse(new LearningCourse(
+                "Mathematical Foundation of Computing (ENG)",
+                "MATH 150 Calculus I, CS50 Introduction to Programming",
+                "Mathematical Logic,\nElements of Discrete Mathematics,\nElements of Sets Theory,\nElements of Graph Theory,\nElements of Combinatorics,\nElements of Digital Systems."
+        ));
+
+        luka.addCourse(new LearningCourse(
+                "Computer Organization (ENG)",
+                "CS50 Introduction to Programming",
+                "Representing and manipulating information,\nMachine-level representations of programs,\nOptimizing program performance,\nThe memory hierarchy."
+        ));
+
+        ums.addStudent(luka);
+
+        String[] names = {
+                "Muhammad Ahmed", "Dachi Baghashvili", "Nikita Bezhanovi", "Mariam Gamishidze",
+                "Tekla Gogua", "Aleksandre Guledani", "Eliste D Costa", "Elizaveta Darsalia",
+                "Merab Enukidze", "Elene Tvauri", "Zaali Injgia", "Alexia-Ioana Cazan",
+                "Aleksandre Kvatashidze", "Grigori Kikvadze", "Nikoloz Lobzhanidze",
+                "Giorgi Maisuradze", "Giga Mamulashvili", "Lazare Nadaraia",
+                "Aleksi Naskidashvili", "Meryem Nobatova", "Tatuli Ortavidze",
+                "Giorgi Pirveli", "Lizi Rakviashvili", "Lasha Ghurtskaia",
+                "Paata Shvelidze", "Nikoloz Chomakhidze", "Lasha Chubinidze",
+                "Anzor Tsiskarishvili", "Luka Tsakadze", "Nikoloz Tsiklauri",
+                "Dachi Chachia", "Aleksandre Japharidze", "Nikoloz Jintcharadze"};
+
+        for (String name : names) {
+            Student student = new Student(name);
+            ums.addStudent(student);
+        }
+
+        ums.printStudentData(luka);
+
+    }
+}
