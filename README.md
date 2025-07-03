@@ -25,7 +25,7 @@ This Java program simulates a University Management System with:
 ├─────────────────┤                │ - courses: List<Course>│
 │ + addStudent()   │                ├────────────────────────┤
 │ + printStudentData(s:Student)    │ + getFullName()         │
-└─────────────────┘                │ + setFullName()         │
+└─────────────────┘                │ + setFullName()         │ 
                                    │ + getCourses()          │
                                    │ + addCourse(c:Course)   │
                                    └────────────────────────┘
